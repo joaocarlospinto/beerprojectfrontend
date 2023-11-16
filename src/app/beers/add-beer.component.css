@@ -1,0 +1,62 @@
+.field-error {
+    border: 1px solid red;
+}
+td,
+thead,
+table{
+    background-color: rgb(70, 68, 67);
+    color: rgb(246, 216, 23);
+  }
+
+th{
+    background-color: rgb(51, 53, 53);
+    color: rgb(246, 216, 23);
+  }
+
+  a:link {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: yellowgreen;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  .card {
+    background-color: rgb(70, 68, 67); 
+    color: rgb(246, 216, 23);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  .form-control {
+    background-color: rgb(70, 68, 67); 
+    color: rgb(246, 216, 23);
+
+  }
+
+  .card-header {
+    text-align: center; 
+    background-color: rgb(51, 53, 53);
+  }
+
+  .btn {
+    width:80px; 
+    color: rgb(246, 216, 23)
+  }
+
+
+input:focus{
+    background-color: rgb(51, 53, 53);
+    color: rgb(246, 216, 23);
+  }

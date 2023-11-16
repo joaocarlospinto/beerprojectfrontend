@@ -1,0 +1,78 @@
+td,
+thead,
+table {
+  background-color: rgb(70, 68, 67);
+  color: rgb(246, 216, 23);
+}
+
+th {
+  background-color: rgb(51, 53, 53);
+  color: rgb(246, 216, 23);
+}
+
+a:link {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: yellowgreen;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.card {
+  background-color: rgb(70, 68, 67);
+  color: rgb(246, 216, 23);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card-header {
+  text-align: center;
+  background-color: rgb(51, 53, 53);
+}
+
+.card-footer {
+  background-color: rgb(51, 53, 53);
+}
+
+input {
+  border-radius: 4px;
+  background-color: rgb(51, 53, 53);
+  color: rgb(246, 216, 23);
+  border: none;
+  width: 30%;
+  height: 100%;
+}
+
+input:focus {
+
+  background-color: rgb(51, 53, 53);
+  color: rgb(246, 216, 23);
+}
+
+.btn {
+  --bs-btn-padding-y: .300rem;
+  --bs-btn-padding-x: .2rem;
+  --bs-btn-font-size: .95rem;
+  color: rgb(70, 68, 67);
+  background: rgb(246, 216, 23);
+  outline-color:  rgb(246, 216, 23);
+}
+
+h5 {
+  text-align: right;
+}

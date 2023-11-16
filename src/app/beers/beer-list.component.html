@@ -1,0 +1,89 @@
+<div style="justify-content: center; text-align: center">
+  <img src="./assets/images/logo-bg.png" style="width: 20%" />
+</div>
+<div class='card'>
+  <div class='card-header'>
+    <h4>{{pageTitle}}</h4>
+  </div>
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col'>
+        <h5>Filter By:</h5>
+      </div>
+      <div class='col-9'>
+        <input type='text' [(ngModel)]='listFilter' />
+      </div>
+      <div class='col'>
+        <button class='btn btn-primary' (click)="onAdd()">
+          <b>ADD BEER</b>
+        </button>
+      </div>
+      <p></p>
+    </div>
+
+    <div class='table-responsive'>
+      <table class='table' *ngIf='beers.length' style="width:100%"  >
+        <thead>
+          <tr>
+            <th>Beer</th>
+            <th>Type</th>
+            <th>Origin</th>
+            <th>Price</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor='let beer of filteredBeers'>
+            <td style="width: 25%" > 
+              <a [routerLink]="['/beers',beer.id]">
+                <img src="./assets/images/beer-mug.svg" style="width: 10%" />                
+              </a>
+              {{beer.name}}
+            </td>
+            <td>{{beer.type}}</td>
+            <td>{{beer.origin}}</td>
+            <td>{{beer.price | currency:'EUR':'symbol':'1.2-2'}}</td>
+            <td><pm-star [rating]='beer.rating'></pm-star></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<p></p>
+
+
+<div class='card'>
+  <div class='card-header'>
+    <h4>TOP 3 Beers</h4>
+  </div>
+
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <h2 class="d-block w-100 text-center" *ngIf='topBeer1'> 1º {{topBeer1.name}}</h2>
+      </div>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <h2 class="d-block w-100 text-center" *ngIf='topBeer2'> 2º {{topBeer2.name}}</h2>
+      </div>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <h2 class="d-block w-100 text-center" *ngIf='topBeer3'> 3º {{topBeer3.name}}</h2>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
