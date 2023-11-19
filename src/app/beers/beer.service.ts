@@ -9,7 +9,8 @@ import { IBeer } from "./beer";
 })
 export class BeerService {
 
-  private beerUrl = 'https://beer-project-api.onrender.com/beersapi';
+private beerUrl = 'https://beer-project-api.onrender.com/beersapi';
+// private beerUrl = 'http://localhost:8080/beersapi';
   private countryUrl = 'assets/countries.json';
 
   constructor(private http: HttpClient) { }
